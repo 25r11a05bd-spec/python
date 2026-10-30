@@ -1,0 +1,115 @@
+more string mniculation methods and funtions
+  1)len() function is used to know the length of the string 
+  ex)
+  name='sanjay'
+  print(len(name))
+  output:
+  6
+  2).upper() is used turn entir string to upper case
+  ex)
+  name ='sanjay'
+  print(name.upper())
+
+  output:
+  SANJAY
+  3).lower() is used to turn it to lower case
+  name='SANJAY'
+  print(name.lower())
+  output:
+  sanjay
+  4).find() is used to find sub string in the given string it is going to return the index .if not found returns -1
+    print(('hi sanjay').find('sanjay'))
+    output
+    3
+  5).replace(what to replace,what to put in that place) it is used to replace sub string in a string with another sub string
+    print(('hi sanjay').replace('hi','hello'))
+    output
+    hello sanjay
+  6) in operator is use see  if a particular string exists in the given string or not it retuens boolen value
+    print('hi' in 'hi sanjay')
+
+    output: True
+  7) .count() it counts the occarances of a particular character in a string
+    print('hi hi sanjay'.count('hi'))
+    output:
+    2
+
+learnig :
+    1) in python there are functions and methodes we use methods with a . operator 
+    
+
+
+  1a)we an add different modulses with import 
+    ex) import math
+    print(pow(2,3)
+
+    output : 8
+ some more methods in math module 
+          1:fabs(x)--Absolute value of x
+
+
+    2) if statment in python 
+  ex1)  a=2
+    if a==2:
+      print('hi')
+    else 
+      print('hello')
+    output:
+    hi
+   ex2)
+    a=6
+    if a<5:
+      print('less than five')
+    elif a>5:
+      print('greater than five')
+    else:
+      print('ok')
+    output :
+    greater than five
+
+    learning :
+    1) in python we do not use brakets we indentation(basical tab)
+    2) the condition is not writen in brakets as c it is write as if condition 
+    3) we have elif instad of else if 
+ 3) logcal opretor and,or,not
+ ex1)a=True
+     b=True
+     if a and b
+        print('yes yes')
+  ex2)a=True
+      b=False
+      if a or b:
+        print('oo oo ooooo')
+    output
+    oo oo ooooo
+    ex3)
+    a=False
+    if not a:
+      print('okok')
+    output 
+    okok
+
+   4) while statment while condition
+    limit=3
+    count=0
+    k=2
+    while count<limit:
+      a=int(input('guess'))
+      if a==k:
+         print('correct guess')
+         break
+    else:
+        print('try next time')   
+    input:
+    1
+    3
+    2
+    output 
+    correct guess
+    
+    
+    learning :
+    else block executes only when break is no executed in the progrme (basicaly it run when while condition naturaly failes)
+
+
+    course time stamp 1:44
