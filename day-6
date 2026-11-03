@@ -1,0 +1,51 @@
+founctoins in python 
+  ex)def sanjay():
+        print("Hello World")
+
+    print("start")
+    sanjay()
+    print("end")
+output
+  start
+  Hello World
+  end
+
+  we use def to indicate start of a function 
+ # an example for parameter function
+  ex)
+  def sum(n):
+    sum1=0
+    for i in range(n):
+        sum1+=i
+    print(sum1)
+
+
+sum(int(input("give a number ")))
+output :
+  10
+#founction with return unlike in c we do  not need to tell what type of return type it will give python automatically knows
+  here is an example of that same one as the last but with return type
+  ex)
+  def sum(n):
+    sum1=0
+    for i in range(n):
+        sum1+=i
+    return sum1
+
+
+out=sum(int(input("give a number ")))
+
+print(out)
+  output:
+  10
+  exceptional handling in java we have try,catch in python we have try,except
+  ex)
+  try:
+    a=int(input("a number"))
+    b=int(input("b number"))
+    c=a/b
+    print(c)
+except ZeroDivisionError:
+    print("division by zero")
+except ValueError:
+    print("invalid input")
