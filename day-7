@@ -1,0 +1,29 @@
+You are given a list of documents:
+documents = [
+    "python is a programming language",
+    "Java is an object oriented language",
+    "PYTHON is used in AI",
+    "RAG uses documents to answer questions",
+    "Python is popular for AI development"
+]
+  Write a Python function called count_python(doc, x) that:
+1. Accepts a list of documents and a counter variable.
+2. Traverses every document in the list.
+3. Counts how many times the word "python" appears in all documents.
+4. Ignores uppercase and lowercase differences.
+5. Returns the final count.
+
+  code:
+  def count_python(doc, x):
+    for i in range(len(doc)):
+        x+=doc[i].lower().count("python")
+    return x
+
+documents = [
+    "python is a programming language",
+    "Java is an object oriented language",
+    "Python is used in AI",
+    "RAG uses documents to answer questions",
+    "Python is popular for AI development"
+]
+print(count_python(documents, 0))
