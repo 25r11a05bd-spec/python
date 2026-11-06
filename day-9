@@ -1,0 +1,108 @@
+##class:A class is a blueprint for creating object
+##object:An object is an instantiation of a class. When class is defined, a template (info) is
+defined. Memory is allocated only after object instantiation.
+  basic examples
+  ex1)
+  class a:
+    def print_hi(name):
+        print(f'Hello, {name}')
+
+
+a.print_hi('sanjay')
+print(a.print_hi('sanjay'))
+  output:
+  Hello, sanjay
+  Hello, sanjay
+  None
+
+  ## Python OOP – self Keyword
+
+### What is self?
+
+ self represents the current object of a class.
+ It is used to access instance variables and methods.
+ Python automatically passes the current object as the first argument when calling an instance method.
+
+### Example
+
+python
+class A:
+    def print_hi(self, name):
+        print(f"Hello, {name}")
+
+b = A()
+b.print_hi("hello")
+Output:
+text
+Hello, hello
+Why do we use self?
+
+When we call:
+python
+b.print_hi("hello")
+
+Python internally treats it as:
+python
+A.print_hi(b, "hello")
+
+Here:
+b is automatically passed as self.
+"hello" is passed as name.
+
+### Important Points
+
+1. self is not a Python keyword; it is a naming convention.
+2. It must be the first parameter of an instance method.
+3. It is similar to this in Java.
+4. Unlike Java, Python requires us to explicitly write self in instance method definitions.
+
+1. Constructor
+In Java, the constructor has the same name as the class.
+In Python, we use __init__(self) as the constructor (initializer).
+It executes automatically when an object is created.
+class A:
+    def __init__(self):
+        self.name = "Sanjay"
+b = A()
+
+2. Instance Variable
+Created using self.
+Belongs to an object.
+Accessed using the object name.
+self.name = "Sanjay"
+print(b.name)
+
+3. Class Variable
+Declared directly inside the class.
+Shared by all objects.
+Accessed using the class name or object name.
+class A:
+    name = "Sanjay"
+b = A()
+print(A.name)
+print(b.name)
+
+ex)
+class a:
+    def __init__(self):
+        self.name="sanjay"
+    def print_hi(self,name):
+        print(f'Hello, {name}')
+
+b=a()
+b.print_hi(b.name)
+output:
+Hello, sanjay
+
+ex)
+class person:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        print(f"hi {self.name} ")
+
+p=person("John")
+p.talk()
+output:
+hi John 
+
