@@ -1,0 +1,34 @@
+1. What is Inheritance?
+
+Inheritance allows one class (child) to acquire the properties and methods of another class (parent).
+
+It helps in code reusability.
+
+2. Example
+
+class Animal:
+    def eat(self):
+        print("Eating")
+
+class Dog(Animal):
+    def bark(self):
+        print("Barking")
+
+d = Dog()
+d.eat()
+d.bark()
+
+Output:
+
+Eating
+Barking
+
+3. Difference Between Python and Java
+
+Java: class Dog extends Animal
+
+Python: class Dog(Animal)
+
+Both support inheritance and method overriding.
+
+Python supports multiple inheritance directly, whereas Java classes support only single class inheritance.
