@@ -1,0 +1,34 @@
+Question
+Given a string, write a Python function to count how many times each character appears using a dictionary.
+Input:
+text = "banana"
+Expected Output:
+b : 1
+a : 3
+n : 2
+
+Solution
+def count_frequency(text):
+    freq = {}
+    for i in text:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    return freq
+
+text = "banana"
+result = count_frequency(text)
+
+for key, value in result.items():
+    print(key, ":", value)
+
+Explanation
+freq = {} creates an empty dictionary to store characters and their counts.
+for i in text traverses each character in the string.
+if i in freq checks whether the character already exists in the dictionary.
+If it exists, freq[i] += 1 increases its count by 1.
+Otherwise, freq[i] = 1 adds the character with an initial count of 1.
+return freq returns the completed dictionary.
+
+result.items() gives us both keys and values so we can print each character with its frequency.
