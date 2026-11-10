@@ -1,0 +1,30 @@
+Question
+Given a list of integers, find the second largest distinct number without using sort() or max().
+Input:
+nums = [10, 5, 20, 8, 20, 15]
+Expected Output:
+15
+Solution
+def second_largest(nums):
+    largest = float('-inf')
+    second = float('-inf')
+    for i in nums:
+        if i > largest:
+            second = largest
+            largest = i
+        elif i > second and i != largest:
+            second = i
+    return second
+nums = [10, 5, 20, 8, 20, 15]
+print(second_largest(nums))
+Explanation
+1)largest stores the largest number found so far.
+2)second stores the second largest distinct number.
+3)float('-inf') initializes both variables to negative infinity so that negative numbers are also handled.
+4)The loop traverses every element in the list.
+5)if i > largest checks whether the current number is greater than the largest number.
+6)If true, the previous largest becomes the second largest.
+7)The current number becomes the new largest.
+8)elif i > second and i != largest checks whether the current number is greater than the second largest but not equal to the largest.
+
+Finally, the function returns the second largest number.
