@@ -1,0 +1,36 @@
+Question
+Given a string, find the first character that appears only once in the string.
+Input:
+text = "aabbcde"
+Expected Output:
+c
+Solutio
+def first_unique(text):
+    freq = {}
+    for i in text:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    for i in text:
+        if freq[i] == 1:
+            return i
+    return None
+text = "aabbcde"
+print(first_unique(text))
+Explanation
+freq = {} creates an empty dictionary to store character frequencies.
+
+The first for loop traverses the string and counts each character.
+
+if i in freq checks whether the character already exists in the dictionary.
+
+If it exists, its count is increased; otherwise, it is added with a count of 1.
+
+The second for loop traverses the original string again, maintaining the original character order.
+
+if freq[i] == 1 checks whether the character appears only once.
+
+return i returns the first character satisfying the condition.
+
+return None is used when no non-repeating character exists.
